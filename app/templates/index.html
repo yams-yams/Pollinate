@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block polls %}
+    {% for election in elections %}
+        <div><p>{{ election.question }}</p>
+            <button type="choice"> {{ election.choice1 }}</button>
+            <button type="choice"> {{ election.choice2 }}</button>
+        </div>
+    {% endfor %}
+{% endblock %}
