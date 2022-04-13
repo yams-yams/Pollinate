@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block polls %}
+{% block content %}
+    <h1>Hi {{ current_user.username }}!</h1>
     {% for election in elections %}
         <div><p>{{ election.question }}</p>
             <button type="choice"> {{ election.choice1 }}</button>
